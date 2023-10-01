@@ -1,6 +1,7 @@
 package com.driver;
 
-
+import java.lang.*;
+import java.util.*;
 public class CurrentAccount extends BankAccount{
     String tradeLicenseId; //consists of Uppercase English characters only
 
@@ -57,7 +58,7 @@ public class CurrentAccount extends BankAccount{
             freq[tradeLicenseId.charAt(i)-'A']++;
         }
 
-        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b)->{
+        PriorityQueue<Pair> pq=new PriorityQueue<>((a,b)->{
             return a.val-b.val;
         });
 
